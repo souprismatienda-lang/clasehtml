@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos</title>
+    <style>
+       body{
+        background-color: #E9C46A;
+       } 
+               header{
+            background-color: #36BA98;
+            text-size-adjust: 15px;
+            text-align: center; 
+            color: #FBFFE4;
+        }
+        
+        footer {
+            color: #FBFFE4; 
+            background-color: #36BA98; 
+            text-align: center;
+        }
+
+        .contenido{
+            background-color: chocolate;
+        }
+
+        #selector_id{
+            color: darkolivegreen; 
+        }
+
+        .peli1{
+            color: blueviolet;
+            border: 4px;
+            border-style: solid;
+            border-color: aquamarine;
+            border-radius: 10px;
+        }
+
+        .peli2{
+            color:olive;
+        }
+
+        .peli3{
+            color: brown;
+            background-color: cornflowerblue;
+        }
+
+        #zona_de_practica{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: darkmagenta;text-align: center; color: coral;">
+        <h1>Curso CFL 414</h1>
+        <p>Lunes, miercoles, viernes de 9:10 a 12:00</p>  
+    </header>
+    <div class="contenido">
+        <h2>Etiqueta Estilo</h2>
+        <p>Hasta el momento utilizamos el atributo estilo para modificar las propiedades de los elementos HTML, pero al hacerlo estamos generando codigo "boilerplate".<br> para evitar este tipo de codigo, en vez de agregar el atributo style a todas las etiquetas podemos crear una etiqueta llamada style y escribir los estilos dentro de esta.</p>
+        <p> La etiqueta style aplica los fundamentos de css, esto quiere decir que utilizamos una combinación de propiedades y valores.</p>
+        <h3>Selectores</h3>
+        <p>Existen multiples selectores para modificar el comportamiento de cada elemento HTML. </p>
+        <ul>
+            <li>Selector de etiqueta: este selector a TODAS las etiquetas seleccionadas, ej: div{} modifica todos los divs que se encuentran en el documento</li>
+            <li>Selector de clase: Cada etiqueta puede tener el atributo class, este define un nombre de clase para la etiqueta o grupos de etiquetas. Se pueden establecer multiples clases para cada etiqueta.<br>En la etiqueta estilo, seleccionamos la clase con un . Ej: para seleccionar la clase contenido escribimos .contenido {}</li>
+            <li id="selector_id">Selector de id: Al igual que el atributo class cada etiqueta puede tener un atributo id, con la diferencia que este atributo identifica de manera unica al elemento HTML. <br> En la etiqueta style lo seleccionamos con un #</li>
+        </ul>
+        <h2>Zona de práctica</h2>
+        <p>Buscar 3 peliculas y anotar el nombre o titulo, el director y el genero. Crear 3 divisores que contengan dichos datos y agregar estilos a cada división </p>
+        <div id="zona_de_practica">
+            <div class="peli1">
+                <h2>Harry Potter</h2>
+                <ul>
+                    <li>Director: Chris Columbus</li>
+                    <li>Genero: Fantasia</li>
+                </ul>
+            </div>
+            <div class="peli2">
+                <h2>El señor de los anillos</h2>
+                <ul>
+                    <li>Director: Tolkien</li>
+                    <li>Genero:Fantasia</li>
+                </ul>
+            </div>
+            <div class="peli3"
+                <h2>La sirenita</h2>
+                <ul>
+                    <li>Director: Andersen</li>
+                    <li>Genero:Animado</li>
+                </ul>
+        </div>
+
+    </div>
+    <footer style="color: white; background-color: black; text-align: center;">
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>

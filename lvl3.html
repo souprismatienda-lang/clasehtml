@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de cajas</title>
+    <style>
+       body{
+        background-color: #E9C46A;
+       } 
+               header{
+            background-color: #36BA98;
+            text-size-adjust: 15px;
+            text-align: center; 
+            color: #FBFFE4;
+        }
+        
+        footer {
+            color: #FBFFE4; 
+            background-color: #36BA98; 
+            text-align: center;
+        }
+
+        #caja1{
+            width: 200px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 40px;
+        }
+        #caja2{
+            width: 300px;
+            height: 150px;
+            border: 15px solid green;
+            margin: 40px;
+        }
+        .ejemplos{
+            display: flex;
+        }
+        .ficha{
+            width: 200px;
+            height: 320px;
+            border: 5px solid blue;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        .galeria{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .ficha_img{
+            border: 2px solid green;
+            margin: 7px 7px 50px 7px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curso CFL 414</h1>
+        <p>Lunes, miercoles, viernes de 9:10 a 12:00</p>  
+    </header>
+    <div id="contenido">
+        <h2>Modelo de cajas</h2>
+        <p>
+            El termino "modelo de cajas" es utilizado cuando hablamos de diseño web y estructura del sitio.<br> Esencialmente este modelo es una caja que se envuelve al rededor de todo elemento HTML. <br> Cada caja consiste de 4 partes:
+            <ul>
+                <li>Content (contenido): Es el contenido que se muestra en la caja.</li>
+                <li>padding (margen interno): Crea un area al rededor del contenido, el padding es transparente.</li>
+                <li>Border (bordes): Un borde que envuelve el contenido y el padding.</li>
+                <li>Margin (margen): Crea un area al rededor del borde. El margin es transparente.</li>
+            </ul> 
+        </p>
+    </div>
+    <div class="ejemplos">
+        <div id="caja1">
+            <p>Este es el contenido de la caja numero 1</p>
+        </div>
+                <div id="caja2">
+            <p>Este es el contenido de la caja numero 2</p>
+        </div>
+    </div>
+    <div class="galeria">
+        <div class="ficha">
+            <div class="ficha_img">
+                <img src="./img/ficha_harry_potter.jpg">
+            </div>
+            <span>
+                <p>Harry Potter</p>
+                <ul>
+                    <li>Género: Fantasia.</li>
+                    <li>Director: Chris Columbus.</li>
+                    <li>Duración: 2:44.</li>
+                </ul>
+            </span>
+        </div>
+        <div class="ficha">
+            <div class="ficha_img">
+                <img src="./img/ficha_el_señor_de_los_anillos.jpg">
+            </div>
+            <span>
+                <p>El señor de los anillos</p>
+                <ul>
+                    <li>Género: Fantasia.</li>
+                    <li>Director: Tolkien.</li>
+                    <li>Duración: 4:15.</li>
+                </ul>
+            </span>
+        </div>
+                <div class="ficha">
+            <div class="ficha_img">
+                <img src="./img/ficha_la_sirenita.jpg">
+            </div>
+            <span>
+                <p>La sirenita</p>
+                <ul>
+                    <li>Género: Animado</li>
+                    <li>Director: Andersen.</li>
+                    <li>Duración: 1:36.</li>
+                </ul>
+            </span>
+        </div>
+    </div>
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>
