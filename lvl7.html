@@ -25,7 +25,43 @@
     </nav>
 
     <div class="contenido">
-        <div></div>
+        <div class="articulo">
+            <div class="titulo">
+                <h2>¿Que es el diseño responsivo?</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>El diseño responsivo no es un programa ni JavaScript, es una manera de utilizar solo HTML y CSS para poder representar de manera correcta nuestro sitio en todos los dispositivos.<br>Las paginas web pueden ser visualizadas en diferentes dispositivos como: laptops, pc, tablets o smarthphones. Nuestros sitios deberian verse bien y ser de facil acceso independientemente de su resolución.<br>Las paginas no tienen que dejar afuera información si no entran en la pantalla, deben adaptarse para encajar en cada una de ellas.</p>
+            </div>
+
+            <div class="parrafo">
+                <h3>Viewport</h3>
+                <p>El viewport es el area visible de nuestra web para el usuario. este varia con el dispositivo, es mas pequeño en smartphone que en una pantalla de computadora.<br>Antes de las tablets y los dispositivos mobiles, las paginas web eran diseñadas solo para monitores de PC, y era común tener diseños estaticos y de tamaño fijo. Entonces comenzamos a surfear por internet en diferentes aparatos, las paginas fijas eran demasiado grandes para encajar en el viewport. Para solucionar esto, los navegadores en esos dispositivos escalaban el sitio entero para adecuarlos a su pantalla.</p>
+                <h3>Configurando el Viewport</h3>
+                <p>Este metodo fue introducido en HTML5 para permitir a los diseñadores tomar control sobre la pantalla del usuario, a travez de la etiqueta &lt;meta&gt;. Esta etiqueta debe estar contenida dentro del elemento &lt;head&gt;</p>
+                <p>El elemento &lt;meta&gt; configurado con el viewport le da instrucciones al navegador para controlar el escalado y las dimensiones de la pagina.</p>
+                
+                <ul>
+                    <li>width=device-width: establece el ancho de la pagina para que siga el ancho del dispositivo.</li>
+                    <li>initial-scale=1.0: establece el zoom inicial cuando la pagina es cargada por primera vez por el navegador.</li>
+                </ul>
+                
+                <ul>
+                    <li><a href="./ejemplovp1.html">Ejemplo sin viewport</a></li>
+                    <li><a href="./ejemplovp2.html">Ejemplo con viewport</a></li>
+                </ul>
+
+            <div class="parrafo">
+                <h2>Escalar contenido al Viewport</h2>
+                <p>Los usuarios estan acostumbrados a navegar los sitios de manera vertical, en mobil o escritorio, pero no horizontalmente.<br>Entonces, si el usuario es forzado a navegar horizontalmente, o a hacer zoom, para ver el sitio entero, esto resulta en una pobre experiencia del usuario.<br>Algunas reglas a seguir son:</p>
+                <ol>
+                    <li><b>No utilizar elementos grandes con anchos fijos -</b> Por ejemplo, si el ancho de una imagen es mas grande que el Viewport, esto causa que la pagina se desplace horizontalmente. Recuerda ajustar este contenido para encajar con el ancho del Viewport</li>
+                    <li><b>No dejar que el contenido dependa de un ancho en particular para renderizarse correctamente -</b> Ya que las dimensiones de pantalla y su ancho en px puede variar mucho entre dispositivos, el contenido no debe depender de un ancho de Viewport en particular. A veces es mejor utilizar medidas relativas y no absolutas.</li>
+                    <li><b>Utilizar las consultas de medios de CSS para aplicar diferentes estilos para pequeñas o grandes pantallas. -</b> Establecer anchos grandes y absolutos para los elementos de la pagina causara que dichos elementos sean muy grandes para dispositivos pequeños. En vez de esto, considere utilizar valores relativos como width:100%. También hay que ser cuidadosos utilizando valores absolutos para el posicionamiento, ya que podría causar que los elementos caigan fuera del Viewport en dispositivos pequeños.</li>
+                </ol>
+            </div>
+            </div>
+        </div>
     </div>
     
     <footer>
