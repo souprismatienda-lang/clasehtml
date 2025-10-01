@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/lvl6.css">
+    <title>Items de Grilla</title>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL6</a> |
+    </nav>
+
+    <div class="contenido">
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Items de Grilla CSS</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>Un contenedor de grilla, puede contener 1 o multiples items de grilla.<br>Por defecto, un contenedor tiene un item de grilla por cada columna, en cada fila, pero podemos estilizar dichos items de manera tal que se muestren en multiples columnas y/o filas.</p>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Propiedades grid-column-start y grid-column-end</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>La propiedad grid-column-start especifica donde comienza el item de grilla.<br>La propiedad grid-column-end especifica donde termina el item de grilla.</p>
+            </div>
+            
+            <p>Estas propiedades se aplican a los items de la grilla, por lo tanto hay que definir las clases de cada item, para poder seleccionarla mediante CSS.<br>Utilizamos como valor, los numeros de linea, en este ejemplo seleccionamos el inicio en la linea 1 y el final en la linea 3.</p>
+            
+            <div class="contenedor-b ejemplo1">
+                <div class="gitem1">1</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+                <div class="gitem7">7</div>
+                <div class="gitem8">8</div>
+            </div>
+            
+            <p>Para simplificar el uso de las propiedades grid-column-start y grid-column-end, podemos utilizar la propiedad grid-column. Esta permite utilizar el numero de linea o la palabra clave "span" para definir cuantas columnas abarcara el item.</p>
+            
+            <div class="contenedor-b ejemplo2">
+                <div class="gitem1">1</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+                <div class="gitem7">7</div>
+                <div class="gitem8">8</div>
+            </div>
+            
+            <div class="contenedor-b ejemplo3">
+                <div class="gitem1">1</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+                <div class="gitem7">7</div>
+                <div class="gitem8">8</div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>La propiedad grid-area</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>Esta propiedad es un atajo para las propiedades grid-column-start, grid-row-start, grid-column-end y grid-row-end.<br>La sintaxis de los valores es la siguiente: grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+            </div>
+
+            <p>Este ejemplo hace que el item 4 comience en la fila 1, columna 2 y termine en la fila 3, columna 4.</p>
+            <div class="contenedor-b ejemplo4">
+                <div class="gitem1">1</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+                <div class="gitem7">7</div>
+                <div class="gitem8">8</div>
+            </div>
+
+            <p>Este ejemplo hace que el item4 comience en la linea de fila 1 y linea de columna 1, y abarque 4 filas y 1 columna.</p>
+            <div class="contenedor-b ejemplo5">
+                <div class="gitem1">1</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+                <div class="gitem7">7</div>
+                <div class="gitem8">8</div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Nombrando items de grilla con grid-area</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>La propiedad grid-area puede también ser utilizada para asignar nombres a los items de grilla.<br>Los items nombrados pueden ser referenciados por la propiedad grid-template-areas del contenedor de grilla.</p>
+            </div>
+
+            <p>gitem1 fue nombrado miarea en CSS, y al utilizarlo como valor de grid-template-areas, este abarca 5 columnas.</p>
+            <p>Los valores de las areas tienen que estar escritas entre comillas simples '', cada area separada por un espacio.</p>
+            <div class="contenedor-b ejemplo6">
+                <div class="gitem1">Mi Area</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+            </div>
+
+            <p>Se puede utilizar el (.) como identificador de areas sin nombre, en este caso las primeras 3 columnas son ocupadas por el area "sector" y las 2 columnas restantes se ocupan por items sin nombre.</p>
+            <div class="contenedor-b ejemplo7">
+                <div class="gitem1">Sector</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+            </div>
+
+            <p>Para definir 2 filas, podemos escribir otra linea de CSS con su correspondiente set de comillas simples.</p>
+            <div class="contenedor-b ejemplo8">
+                <div class="gitem1">Area 51</div>
+                <div class="gitem2">2</div>
+                <div class="gitem3">3</div>
+                <div class="gitem4">4</div>
+                <div class="gitem5">5</div>
+                <div class="gitem6">6</div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Ejemplo de areas</h2>
+            </div>
+            <div class="contenedor-b ejemploareas">
+                <div class="eji1">Cabecera</div>
+                <div class="eji2">Menu</div>
+                <div class="eji3">Principal</div>
+                <div class="eji4">Derecha</div>
+                <div class="eji5">Pie</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>

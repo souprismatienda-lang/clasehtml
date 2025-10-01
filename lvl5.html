@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/general.css">
+    <title>Diseño de grilla</title>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL 6</a> |
+    </nav>
+    
+    <div class="contenido">
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Diseño de Grillas</h2>
+            </div>
+            <div class="parrafo">
+                <p>El modulo de diseño de grilla ofrece un diseño basado en grillas con filas y columnas. Este modulo permite a los desarroladores crear facilmente diseños web complejos. Tambien facilita la estructura <b>responsiva</b> sin utilizar float o posicionamiento. Las propiedades CSS de grilla son soportadas por todos los navegadores modernos.</p>
+                <h3>Grilla vs. Flexbox</h3>
+                <p>El diseño de grilla debe ser utilizado para diseños bidimensionales, con filas y columnas.<br>El diseño Flexbox debe ser utilizado solamente para diseños unidimensionales, con filas o columnas.</p>
+
+            </div>
+        </div>
+        
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Componentes de Grilla CSS</h2>
+            </div>
+            <div class="parrafo">
+                <p>Una grilla siempre consiste de:</p>
+                <ul>
+                    <li><b>Contenedor de grilla</b>: este es el elemento &lt;div&gt; padre</li>
+                    <li><b>Item de grilla</b>: son los elementos dentro del contenedor de grilla.</li>
+                </ul>
+                <p>Siempre comenzamos con el elemento padre llamado contenedor de grilla este puede contener uno o varios elementos de grilla. Todos los hijos directos del contenedor de grilla se convierten automaticamente en elementos de grilla.</p>
+            </div>
+        </div>
+        
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Ejemplo Grilla</h2>
+            </div>
+            <div class="contenedor-grilla">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+            </div>
+        </div>
+        
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Filas y columnas</h2>
+            </div>
+            <div class="parrafo">
+                <p>Las lineas verticales son denominadas columnas.</p>
+                <p>Las lineas orizontales son filas.</p>
+                <p>El espacio entre las filas/columnas las llamamos gap (salto). <br> Podemos ajustar el tamaño del gap con las siguientes propiedades de CSS.</p>
+                <ul>
+                    <li>Column-gap: Espacio entre columnas.</li>
+                    <li>row-gap: espacio entre filas.</li>
+                    <li>gap: espacio entre fila/columna.</li>
+                </ul>
+            </div>
+            <h3>column-gap: 50px</h3>
+            <div class="contenedor-grilla g1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <h3>row-gap: 50px</h3>
+            <div class="contenedor-grilla g2">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+            <h3>gap: 50px</h3>
+            <div class="contenedor-grilla g3">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+        </div>
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Lineas de Grilla</h2>
+            </div>
+            <div class="parrafo">
+                <p>Las lineas entre columnas son llamadas lineas de columna.<br> Las lineas entre filas son llamadas lineas de fila.</p>
+                <p>Podemos especificar donde comienza y termina un item de grilla utilizando estas propiedades:</p>
+                <ul>
+                    <li>grid-column-start</li>
+                    <li>grid-column-end</li>
+                    <li>grid-row-start</li>
+                    <li>grid-row-end</li>
+                    <li>grid-column</li>
+                    <li>grid-row</li>
+                </ul>
+            </div>
+            <h3>grid-column</h3>
+            <div class="contenedor-grilla">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3">3</div>
+                <div class="item4">4</div>
+                <div class="item5">5</div>
+                <div class="item6">6</div>
+                <div class="item7">7</div>
+                <div class="item8">8</div>
+            </div>
+            <h3>grid-row</h3>
+            <div class="contenedor-grilla">
+                <div class="itemr1">1</div>
+                <div class="itemr2">2</div>
+                <div class="itemr3">3</div>
+                <div class="itemr4">4</div>
+                <div class="itemr5">5</div>
+                <div class="itemr6">6</div>
+                <div class="itemr7">7</div>
+                <div class="itemr8">8</div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Pistas de Grilla (Grid Tracks)</h2>
+            </div>
+            <div class="parrafo">
+                <p>Las filas y columnas de una grilla son definidas con las propiedades <i>grid-template-rows</i> y <i>grid-template-columns</i> (se pueden resumir como <i>grid</i> o <i>grid-template</i>).<br>Estas definen las pistas de la grilla (grid tracks). Una pista es el espacio entre 2 lineas de grilla adyacentes.</p>
+                <h3>La propiedad grid-template-columns</h3>
+                <p>La propiedad grid-template-columns establece el número de columnas en el diseño de grillas, y puede definir el ancho de cada columna.<br>El valor de esta propiedad es una lista separada por espacios, donde cada valor individual definen el ancho de la respectiva columna.<br>Si queremos un diseño de grilla con 4 columnas, especificamos el ancho de cada columna como auto para que todas las columnas tengan el mismo ancho</p>
+            </div>
+            <div class="contenedor-grillat1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+            <p>Esta propiedad también puede ser utilizada para especificar el ancho exacto o una mezcla de tamaños automaticos y fijos.</p>
+            <div class="contenedor-grillat2">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Unidad de medida de celdas (fr)</h2>
+            </div>
+            <div class="parrafo">
+                <p>La unidad fr se puede utilizar para definir el ancho de las grillas, de la misma manera que cualquier otra unidad de medida como %, px o em.<br>La unidad fr significa "fracción". Esta unidad divide automaticamente el espacio disponible en fracciones.<br> Ejemplo: 1fr tomara una frección del espacio disponible, mientras que 2 fr tomara 2 fracciones del espacio disponible.</p>
+            </div>
+            <p>Aquí cada columna tomara un 25% del ancho del contenedor, dividido en iguales</p>
+            <div class="contenedorfr">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+            <div class="contenedorfr1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
+        
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Propiedad grid-template-rows</h2>
+            </div>
+            <div class="parrafo">
+                <p>Esta es la propiedad que define el alto de cada fila.<br>Se utiliza de la misma manera que grid-template-columns, con una lista separada por espacios donde cada valor representa el alto de la respectiva fila.</p>
+            </div>
+            <div class="contenedorrow">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
+        <!--para hacer comentarios para mi (no se ve en la pagina)-->
+    </div>
+
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>
