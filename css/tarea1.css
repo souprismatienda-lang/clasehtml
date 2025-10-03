@@ -1,0 +1,38 @@
+.contenedor {
+    display: grid;
+    grid-template-areas:
+    "cabecera cabecera cabecera"
+    "menu contenido derecha"
+    "pie pie pie";
+    gap: 5px;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.contenedor > div {
+    background-color: aqua;
+    padding: 10px;
+}
+
+.contenedor > div.cabecera {
+    grid-area: cabecera;
+    text-align: center;
+}
+
+.contenedor > div.menu {
+    grid-area: menu;
+    text-align: center;
+}
+
+.contenedor > div.principal {
+    text-align: center;
+}
+
+.contenedor > div.derecha {
+    grid-area: derecha;
+    text-align: center;
+}  
+
+.contenedor > div.pie {
+    grid-area: pie;
+    text-align: center;
+}

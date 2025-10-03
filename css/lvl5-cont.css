@@ -1,0 +1,68 @@
+.contenedor-b {
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    background-color: #E9C46A;
+    padding: 10px;
+    gap: 10px;
+}
+
+.contenedor-b > div {
+    background-color: #36BA98;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.ej1 {
+    justify-content: space-evenly;
+}
+
+.ej2 {
+    justify-content: space-around;
+}
+
+.ej3 {
+    justify-content: space-between;
+}
+
+.ej4 {
+    justify-content: center;
+}
+
+.ej5 {
+    justify-content: end;
+}
+
+.ej6 {
+    justify-content: start;
+}
+
+.align {
+    grid-template-columns: auto auto auto;
+    height: 400px;
+} 
+
+.ej7 {
+    align-content: center;
+}
+
+.ej8 {
+    align-content: space-evenly;
+}
+
+.ej9 {
+    align-content: space-around;
+}
+
+.ej10 {
+    align-content: space-between;
+}
+
+.ej11 {
+    align-content: start;
+}
+
+.ej12 {
+    align-content: end;
+}
