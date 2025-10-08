@@ -83,6 +83,59 @@
                 <p>Anteriormente creamos una pagina con filas y columnas, y era responsiva, pero no se veia bien en pantallas pequeñas.<br>Los media queries nos ayudan con esto. Podemos agregar breakpoints (puntos de control), donde ciertas partes del diseño se comportaran de manera diferente en cada punto.</p>
             </div>
         </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Ejercicio Breakpoint</h2>
+            </div>
+            <div class="parrafo">
+                <p>
+                    <a href="./ejerciciobp.html">Ejercicio</a><br>
+                    Aqui utilizamos los media queries para agregar "puntos de quiebre" cuando la pantalla tiene un ancho minimo de 600px y cuando tiene un ancho minimo de 768px
+                </p>
+                <h3>Puntos de quiebre tipicos para diferentes pantallas</h3>
+                <p>
+                Hay muchos dispositivos con diferentes alturas y anchos, por ello es dificil crear un punto exacto por cada dispositivo. Para mantener las cosas sencillas podemos enfocarnos en 5 grupos:
+                <ul>
+                    <li>@media only screen and (max-width: 600px){....} : Dispositivos extra small (telefonos, 600px para abajo)</li>
+                    <li>@media only screen and (min-width: 600px){....} : Dispositivos small (tablets y telefonos grandes, 600px para arriba)</li>
+                    <li>@media only screen and (min-width: 768px){....} : Disposivos medium (tablets panoramicas, 768px para arriba)</li>
+                    <li>@media only screen and (min-width: 992px){....} : Disposivos large (laptops/PCs, 992px para arriba)</li>
+                    <li>@media only screen and (min-width: 1200px){....} : Disposivos extra large (laptops grandes y PCs alta resolución: 1200px para arriba)</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Otros manejos de media queries</h2>
+            </div>
+            <div class="parrafo">
+                <p>Es posible cambiar el diseño de una pagina dependiendo de la orientación del navegador. Podemos utilizar un conjunto de propiedades CSS que solo se aplicaran cuando la ventana del navegador sea mas ancha que larga, esta orientación se conoce como "landscape"</p>
+            </div>
+            <div class="landscape">
+                <p>El color de este contenedor cambiará dependiendo de la orientación.</p>
+            </div>
+
+            <div class="parrafo">
+                <h3>Ocultar elementos con media queries</h3>
+                <p>Otro uso común de los media queries es ocultar elementos en diferentes tamaños de pantalla.</p>
+            </div>
+
+            <div class="ocultar">
+                <p>Este elemento es invisible en pantallas con una resolución menor a 600px.</p>
+            </div>
+
+            <div class="parrafo">
+                <h3>Fuentes variables</h3>
+                <p>También podemos utilizar los media queries para cambiar el tamaño de un elemento en diferentes pantallas</p>
+            </div>
+
+            <div class="variable">
+                <p>Si el tamaño de la pantalla es de 601px o más, se establece el tamaño de la fuente a 80px.<br> Si el tamaño es de 600px o menos, se estableces el tamaño de la fuente a 30px.</p>
+            </div>
+        </div>
     </div>
     
     <footer>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/lvl8.css">
+    <title>Imagenes responsivas</title>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL6</a> |
+        <a href="lvl7.html">LVL7</a> |
+        <a href="lvl8.html">LVL8</a> |
+    </nav>
+
+    <div class="contenido">
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Utilizando la propiedad width</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>Si establecemos la propiedad width a un porcentaje y la propiedad height en auto, la imagen será responsiva y aumentará o disminuirá su escala.</p>
+            </div>
+            <div class="ejimg1">
+                <img src="./img/lvl8escalable.jpg" width="660" height="545">
+            </div>
+
+            <div class="parrafo">
+                <h3>Utilizando la propiedad max-width</h3>
+                <p>Si se establece esta propiedad al 100%, la imagen escalará hacia abajo si tiene que hacerlo, pero nunca escalará hacia arriba para ser más grande que su tamaño original.</p>
+            </div>
+            <div class="ejimg2">
+                <img src="./img/lvl8escalable.jpg" width="660" height="545"><br>
+                <a href="./ejerciciobp.html">Link a ejercicio de bp con la imagen.</a>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Imagenes de fondo</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>Las imagenes de fondo también pueden responder al redimensionamiento y escalado. Vamos a ver 3 metodos diferentes:</p>
+            </div>
+            
+            <h3>Metodo 1</h3>
+            <p>Si la propiedad background-size se establece en "contain", esta escalará e intentará encajar en el area de contenido. Sin embargo, la imagen mantendrá su relación de aspecto (la relación proporcional entre el ancho y alto de la imagen)</p>
+            <div class="metodo1"></div>
+
+            <h3>Metodo 2</h3>
+            <p>Si la propiedad background-size se establece en "100% 100%" la imagen de fondo se estirará para cubrir el total del area que la contiene.</p>
+            <div class="metodo2"></div>
+
+            <h3>Metodo 3</h3>
+            <p>Si la propiedad background-size se establece en "cover", la imagen de fondo escalara para cubrir el total del area de contendio, pero este valor mantiene la relacion de aspecto y algunas partes del fondo podrian cortarse.</p>
+            <div class="metodo3"></div>
+        </div>
+
+        <div class="articuo">
+            <div class="titulo">
+                <h2>Diferentes imagenes para diferentes dispositivos</h2>
+            </div>
+            <div class="parrafo">
+                <p>Una imagen de alta resolucion puede ser perfecta para la pantalla de una PC, pero inutil en un dispositivo pequeño. ¿Por que cargar una imagen grande cuando tenenmos que escalara de todas maneras?. Para reducir la cara, o por cualquier otra razón, podemos utilizar los media queries para mostrar diferentes imagenes en diferntes dispositivos</p>
+            </div>
+            <div class="fondovariable"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>
