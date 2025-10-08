@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/lvl9.css">
+    <title>JavaScript</title>
+    <script>
+        function cambiarParrafo(){
+            document.getElementById("demo2").innerHTML = "Parrafo cambiado"
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL6</a> |
+        <a href="lvl7.html">LVL7</a> |
+        <a href="lvl8.html">LVL8</a> |
+        <a href="lvl9.html">LVL9</a> |
+    </nav>
+
+    <div class="articulo">
+        <div class="titulo">
+            <h2>¿Que es JavaScript?</h2>
+        </div>
+
+        <div class="parrafo">
+            <p>JavaScript es el lenguaje por defecto de programación en la web, puede calcular, manipular y validar datos. Se puede utilizar para modificar o actualizar ambos codigos HTML y CSS.<br>Si bien comparte nombre con el lenguaje Java, estos no son iguales. JavaScript se envia desde el servidor web a travez de los mensajes http junto con el html, y este se ejecuta en el navegador cliente, a diferencia e Java que se compila en la PC.</p>
+
+            <h3>JavaScript puede cambiar el contenido HTML</h3>
+            <p>Uno de los muchos metodos de JavaScript con HTML es <code>getElementById()</code>. Este metodo "encuentra" un elemento HTML cuyo ID sea igual al que definimos entre parentesis (innerHTML).</p>
+            
+            <div class="jsejemplo1">
+                <h4>Cambiamos contenidos</h4>
+                <p id="demo">Este contenido cambia cuando tocamos el boton</p>
+                <button type="button" onclick='document.getElementById("demo").innerHTML = "Contenido cambiado!"'>click aquí</button> 
+                <button type="button" onclick='document.getElementById("demo").innerHTML = "Contenido cambiado otra vez!"'>Esto es un boton</button>
+            </div>
+
+            <div class="jsejemplo2">
+                <h4>Cambiamos atributos HTML</h4>
+                <p>A travez de JavaScript podemos cambiar los valores de diferentes atributos, en este caso cambiamos el atributo src de la etiqueta &lt;img&gt;</p>
+                <button onclick='document.getElementById("lampara").src = "./img/pic_bulbon.gif"'>Enciende</button>
+                <img id="lampara" src="./img/pic_bulboff.gif" style="width: 100px;">
+                <button onclick='document.getElementById("lampara").src = "./img/pic_bulboff.gif"'>Apaga</button>
+            </div>
+
+            <div class="jsejemplo3">
+                <h4>Cambiamos estilos CSS</h4>
+                <p>Cambiar el estilo de un elemento HTML, es una variante de cambiar un atributo HTML.</p>
+                <p id="fuente">El tamaño de la fuente cambiará al presionar el boton</p>
+                <button type="button" onclick='document.getElementById("fuente").style.fontSize= "35px"'>Click aquí</button>
+            </div>
+
+            <div class="jsejemplo4">
+                <h4>Escondiendo y mostrando elementos</h4>
+                <p>Es posible cambiar la manera en que se muestran los elementos HTML cambiando su propiedad display</p>
+                <p id="show">Ahora me ves!</p>
+                <button type="button" onclick='document.getElementById("show").style.display="none"'>Ocultar</button>
+                <button type="button" onclick='document.getElementById("show").style.display="block"'>Mostrar</button>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>¿Donde colocamos JS?</h2>
+            </div>
+
+            <div class="parrafo">
+                <h3>La etiqueta &lt;script&gt;</h3>
+                <p>Esta etiqueta funciona de manera similar a &lt;style&gt;, nos permite agregar codigo js fuera de los atributos de los elementos HTML.</p>
+                <div class="jsejemplo5">
+                    <h4>JS en &lt;body&gt;</h4>
+                    <p id="demo1"></p>
+                    <script>
+                        document.getElementById("demo1").innerHTML = "Mi primer JavaScript!";
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Funciones y Eventos</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>Una función de JavaScript es un bloque de codigo que puede ser ejecutado cuando es "invocado".<br>Por ejemplo: Una función puede ser invocada cuando ocurre un evento, como cuando el usuario hace click en un boton.</p>
+                
+                <h3>Scrips en &lt;head&gt; o &lt;body&gt;</h3>
+                <p>Podemos colocar cualquier cantidad de scripts en un documento HTML, estos pueden ir dentro de la sección body o la sección head.<br>Vamos a crear una función dentro de la sección head que será invocada cuando se presione un boton.</p>
+                <div class="jsejemplo6">
+                    <p id="demo2">Un parrafo</p>
+                    <button type="button" onclick="cambiarParrafo()">Click Aquí</button>
+                </div>
+                <p>Ahora vamos a crear una función dentro del &lt;body&gt;</p>
+                <div class="jsejemplo7">
+                    <p id="demo3">No me gusta mi fuente</p>
+                    <button type="button" onclick="cambiaFuente()">Cambiar fuente</button>
+                </div>
+
+                <p>La etiqueta Script es util en casos donde no tenemos muchas lineas de codigo. Pero normalmente los Scripts suelen tener multiples funciones y lineas, por lo tanto al igual que con CSS podemos escribir nuestro codigo en un documento externo, para ello, usamos la etiqueta script solo con el atributo src.</p>
+                <div class="jsejemplo8">
+                    <p id="demo4">Parrafo</p>
+                    <button type="button" onclick="cambiarCosas()">Cambiar</button>
+                    <script src="./JS/lvl9.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+
+    <script>
+        function cambiaFuente (){
+            document.getElementById("demo3").style.fontSize= "30px";
+            document.getElementById("demo3").innerHTML= "Ahora esta mejor";
+        }
+    </script>
+</body>
+</html>

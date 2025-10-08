@@ -80,6 +80,23 @@
             </div>
             <div class="fondovariable"></div>
         </div>
+        
+        <div class="articulo">
+            <div class="titulo">
+                <h2>El elemento &lt;picture&gt;</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>El elemento HTML &lt;picture&gt; nos da a los desarrolladores web más flexibilidad, al momento de especificar recursos de imagenes. El uso más común de este elemento es en imagenes utilizadas en diseño responsivo. En vez de tener una imagen escalada hacia arriba y abajo basada en el viewport, podemos diseñar multiples imagenes para llenar mas adecuadamente el navegador.</p>
+            </div>
+
+            <picture>
+                <source srcset="./lvl8mediano.jpg" media="(max-width: 600px)">
+                <source srcset="./lvl8grande.jpg">
+                <img src="./img/lvl8grande.jpg" alt="paisaje" style="width: auto;">
+            </picture>
+            <p>El atributo src es requerido, y define la fuente de la imagen.<br>El atributo media es opcional, y acepta las reglas del media query de CSS.<br>También deberiamos definir un elemento &lt;img&gt; para navegadores que no soportan el elemento picture</p>
+        </div>
     </div>
 
     <footer>
