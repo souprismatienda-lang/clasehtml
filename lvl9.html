@@ -120,6 +120,50 @@
                 </div>
             </div>
         </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Salidas JavaScript</h2>
+            </div>
+            <div class="parrafo">
+                <p>Existen muchas maneras de mostrar información en pantalla a travez de JavaScript. Ya vimos que podemos acceder a un elemento HTML con el metodo document.getElementById(id), este selecciona el elemento cuyo id coincida con el argumento enviado (los argumentos son los valores que ponemos entre parentesis de la función). Una vez seleccionado, modificamos HTML con el metodo innerHTML o el texto con innerText, pero hay otras maneras de expresar información al usuario.</p>
+            </div>
+
+            <h3>document.write()</h3>
+            <div class="jsejemplo9">
+                <p>Este metodo sobreescribe el documento entero, por lo tanto nunca hay que invocarlo luego de que se haya cargado la pagina.</p>
+                <script>
+                    document.write(10 + 5);
+                </script>
+                <p>El principal uso de este metodo es el de probar diferentes cosas.</p>
+                <button type="button" onclick="document.write(30 + 12)">Click Aquí</button>
+            </div>
+
+            <h3>window.alert()</h3>
+            <div class="jsejemplo10">
+                <p>Esta es una ventana de "alerta", cada vez que se invoca, muestra un "popup" con el mensaje contenido en el argumento de la función.</p>
+                
+                <button type="button" onclick="window.alert('Hola Mundo')">Saludar</button>
+                <p>El estilo de esta ventana, va a depender del sistema operativo y del navegador en el que se haya cargado.<br>Adicionalmente la palabra window puede ser omitido.</p>
+                
+                <button type="button" onclick="alert('Window es opcional')">Sin windows</button>
+                <p>En JavaScript, el objeto window tiene un alcance global, esto quiere decir que las variables, propiedades y metodos, por defecto pertenecen al objeto window. Por ello, especificar window es opcional.</p>
+            </div>
+
+            <h3>console.log()</h3>
+            <div class="jsejemplo11">
+                <p>Utilizado para propositos "debugging", este muestra en la consola el mensaje.</p>
+                <script>
+                    console.log('Deberías estar leyendo esto en el ejemplo 11');
+                </script>
+            </div>
+
+            <h3>window.print</h3>
+            <div class="jsejemplo12">
+                <p>Sirve para imprimir la pagina completa</p>
+                <button type="button" onclick="print()">Imprimir</button>
+            </div>
+        </div>
     </div>
     
     <footer>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <title>Sintaxis JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL6</a> |
+        <a href="lvl7.html">LVL7</a> |
+        <a href="lvl8.html">LVL8</a> |
+        <a href="lvl9.html">LVL9</a> |
+        <a href="lvl10.html">LVL10</a> |
+    </nav>
+
+    <div class="contenido">
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Sintaxis</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>La sintaxis son las reglas que definen la manera en que se escriben los programas. Al igual que en cualquier idioma hablado, tenemos que mantener una sintaxis correcta para que pueda ser interpretado de manera adecuada.</p>
+                <h3>Valores</h3>
+                <p>La sintaxis de JS define 2 tipos de valores</p>
+                
+                <ul>
+                    <li>literales (valores fijos)</li>
+                    <li>variables (valores variables)</li>
+                </ul>
+                
+                <p>Los valores pueden ser de distintos tipos, numericos, alfanumericos, booleanos, entre otros.<br>Los literales son valores escritos directamente en el codigo.</p>
+                <div class="sintaxis1">
+                    <p>Ejemplo de valor numerico literal</p>
+                    <p>1001 (valor entero).<br>10,5 (valor decimal)</p>
+                    
+                    <p>Ejemplo de valor alfanumerico literal</p>
+                    <p>"Hola Mundo!"<br>'Hola Mundo!'</p>
+                    <p>Solemos llamar a estos valores alfanumericos "cadenas de caracteres"</p>
+                </div>
+
+                <p>Las variables por otro lado, son valores que podemos cambiar.<br>Para ello tenemos que definir la variable con un identificador.</p>
+                <div class="sintaxis2">
+                    <p>Podemos imaginar las variables como cajas donde alamacenamos valores, antes de utilizarlas tenemos que definirlas con una de estas 2 palabras claves, <n>let</n> y <n>const</n></p>
+                    <p>let x = 5;<br>const nombre="Tinelli";</p>
+                    <script src="./js/lvl10.js"></script>
+                    <button type="button" onclick="sintaxis1()">mostrar ejemplo</button>
+                    <p>Las palabras claves son "Case sensitive", JS no va a interpretar Let o LET, hay que escribir estas palabras clave de manera correcta.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Variables JS</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>Como mencionamos anteriormente, las variables son contenedores utilizados para almacenar datos, estas deben ser identificadas con <b>nombres unicos</b></p>
+                <code>
+                    Definir x como variable<br>
+                    let x;<br>
+                    Asignar el valor 42 a x<br>
+                    x = 42;
+                </code>
+                <p>Los identificadores tienen algunas reglas:</p>
+                <ul>
+                    <li>Deben iniciar con una letra, _, o $</li>
+                    <li>Pueden contener digitos luego del primer caracter.</li>
+                    <li>No puede ser una palabra clave (const, let, if, etc.).</li>
+                    <li>Son "Case sensitive", diferencian entre mayusculas y minusculas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Operadores</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>Los operadores en JS pueden ser:</p>
+                <h3>de asignacion (=)</h3>
+                <code>
+                    let x = 10<br>
+                    let y = 15<br>
+                    let suma = x + y;<br>
+                </code>
+                <button type="button" onclick="operadorAsignacion()">Respuesta</button>
+                <p>(La respuesta se verá en la consola)</p>
+                
+                <h3>Aritmeticos</h3>
+                <code>
+                    5 * 10;<br>
+                </code>
+
+                <p>Los operadores aritmeticos (+ - * /) son los utilizados para computar valores </p>
+                
+                <p id="opes"></p>
+                <script>operadoresAritmeticos()</script>
+
+                <p>(Antes de invocar a una función que utilice getElementById(), debemos asegurarnos de que dicho elemento ya este cargado en el navegador)</p>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Expresiones</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>Una expresión es una combinación e valores, variables, y operadores, los cuales se computan en un valor.</p>
+                <p>Esta expresión solo utiliza valores literales.</p>
+                <code>
+                    (10 + 5) * 10;<br>
+                </code>
+                <button type="button" onclick="alert((10 + 5) * 10)">Mostrar</button>
+
+                <p>Las expresiones también pueden utilizar variables.</p>
+                <code>
+                    x * 10;
+                </code>
+                
+                <script>
+                    function expresionConVariable(){
+                        x = 2 + 10;
+                        alert (x * 10)
+                    }
+                </script>
+                
+                <button type="button" onclick="expresionConVariable()">Resultado</button>
+
+                <p>Las expresiones con cadenas de caracteres, utilizan el operador + para concatenar diferentes cadenas.</p>
+                <code>
+                    "hola" + " " + "mundo";<br>
+                </code>
+
+                <button type="button" onclick="alert('hola' + ' ' + 'mundo')">Mostrar</button>
+                <p>(Las cadenas de caracteres deben estar encerradas entre comillas dobles o simples dependiendo de la situación.)</p>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Sentencias</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>Un programa de computadora es una lista de "instrucciones" para ser "ejecutadas" por la computadora. Estas instrucciones en programación las llammamos <b>sentencias</b>.<br>La mayoria de los programas escritos en JS, contienen muchas sentencias, las cuales son ejecutadas una por una, de manera secuencial en el orden en que fueron escritas.</p>
+                <p>Las sentencias estan compuestas por: valores, operadores, expresiones, palabras clave, y comentarios.<br>En esta sentencia, por ejemplo, le decimos al navegador que escriba "Hola mundo" dentro de un elemento HTML con el id="saludo".</p>
+                <code>
+                    document.getElementById("saludo").innerHTML = "Hola Mundo";
+                </code>
+
+                <p>Cada sentencia necesita un delimitador que la separe de la siguiente, este es el punto y coma (semicolon ";")</p>
+
+                <code>
+                    let a, b, c; // Declaramos 3 variables<br>
+                    a = 5;       //Asignamos valor 5 a la variable a<br>
+                    b = 6;      //Asignamos el valor 6 a la variable b<br>
+                    c = a + b;  //Asignamos la suma de a y b a la variable c<br>
+                </code>
+
+                <p>Cuando estan separados por ; se permiten multiples sentencias en la misma linea de codigo.</p>
+
+                <code>
+                    a = 5; b = 6; c = a + b; <br>
+                </code>
+
+                <p>Multiples fuentes en linea, suelen omitir el ; ya que el JS no lo requiere, pero su uso es ALTAMENTE RECOMENDADO.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>
