@@ -25,6 +25,7 @@
         <a href="lvl8.html">LVL8</a> |
         <a href="lvl9.html">LVL9</a> |
         <a href="lvl10.html">LVL10</a> |
+        <a href="lvl11.html">LVL11</a> |
     </nav>
 
     <div class="contenido">
@@ -182,6 +183,53 @@
                 </code>
 
                 <p>Multiples fuentes en linea, suelen omitir el ; ya que el JS no lo requiere, pero su uso es ALTAMENTE RECOMENDADO.</p>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Comentarios</h2>
+            </div>
+            <div class="parrafo">
+                <p>Los comentarios en cualquier lenguaje de programación, tienen especial importancia, ya que, permiten a los desarrolladores expresar sus intenciones o explicar algoritmos directamente sobre el codigo fuente.<br>Cada lenguaje maneja de manera diferente los comentarios, pero en la mayoria de los casos son similares.<br>JS tiene 2 maneras de expresar comentarios:</p>
+                <ul>
+                    <li>Comentario de linea</li>
+                    <li>Comentario en bloque</li>
+                </ul>
+                
+                <h3>Comentarios de linea</h3>
+                <p>Cualquier texto entre // y el fin de la linea, será ignorado por JS.</p>
+                <code>
+                    // Esta sentencia cambia la cabecera.<br>
+                    document.getElementById("cabecera").innerHTML = "titulo principal";<br>
+                    // Esta sentencia cambia el parrafo<br>
+                    document.getElementById("parrafo").innerText = "Nuevo parrafo";<br>
+                </code>
+
+                <script>
+                    // Este es un comentario de una sola linea. Será totalmente ignorado por JS.
+                    // Aparte de brindar información, lo podemos utilizar para negar una linea de codigo.
+                    // Y ver diferentes resultados.
+                    document.getElementById("cabecera").innerHTML = "titulo principal"
+                </script>
+
+                <h3>Comentarios en bloque</h3>
+                <p>Este tipo de comentarios, tambien llamado multi linea, define una porción de codigo para ser ignorada. Cualquier texto escrito entre /* y */ será ignorado por JS</p>
+                <code>
+                    /*<br>
+                    El codigo siguiente, cambiará el elemento con id="cabecera"<br>
+                    Y el parrafo con id="parrafo"<br>
+                    */<br>
+                    document.getElementById("cabecera").innerHTML = "titulo principal";<br>
+                    document.getElementById("parrafo").innerText = "Nuevo parrafo";<br>
+                </code>
+                <script>
+                    /*
+                    Este tipo de comentario es muy util para describir de manera detallada
+                    el funcionamiento de sentencias, funciones, etc.
+                    Como vemos todo este texto se ve comentado, por lo tanto ignorado por JS
+                    */
+                </script>
             </div>
         </div>
     </div>

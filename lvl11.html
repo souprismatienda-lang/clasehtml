@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <title>Variables y estructuras</title>
+</head>
+<body>
+    <header>
+        <h1>CFL 414 FrontEnd</h1>
+        <p>Lunes, Miercoles, Viernes de 9:10 a 12:00</p>
+    </header>
+    
+    <nav>
+        <a href="./index.html">INICIO</a> |
+        <a href="./lvl1.html">LVL1</a> |
+        <a href="./lvl2.html">LVL2</a> |
+        <a href="lvl3.html">LVL3</a> |
+        <a href="lvl4.html">LVL4</a> |
+        <a href="lvl5.html">LVL5</a> |
+        <a href="lvl5-cont.html">LVL5 cont</a> |
+        <a href="lvl6.html">LVL6</a> |
+        <a href="lvl7.html">LVL7</a> |
+        <a href="lvl8.html">LVL8</a> |
+        <a href="lvl9.html">LVL9</a> |
+        <a href="lvl10.html">LVL10</a> |
+        <a href="lvl11.html">LVL11</a> |
+    </nav>
+
+    <div class="contenido">
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Variables</h2>
+            </div>
+            
+            <div class="parrafo">
+                <p>Una variable, funciona como un contenedor donde almacenamos valores, estos valores son de diversos tipos, pueden ser numericos, alfanumericos, logicos, entre otros.<br>En JS hay cuatro maneras de definir las variables.</p>
+                <ul>
+                    <li>Utilizando let</li>
+                    <li>Utilizando const</li>
+                    <li>Utilizando var (No es recomendado, se utilizaba en versiones anteriores de JS)</li>
+                    <li>Automaticamente (PARA NADA recomendado, siempre declarar variables con su correspondiente sentencia)</li>
+                </ul>
+
+                <h3>Identificadores</h3>
+                <p>Los identificadores son los nombres que les damos a las variables. <br>Las variables tienen que ser identificadas de manera unica. No pueden existir 2 variables con el mismo identificador.</p>
+                <p>Los nombres pueden ser cortos como x, y, z. Pueden ser descriptivos como edad, suma, nombreAlumno.</p>
+                <p>Las reglas para construir nombres (identificadores) son:</p>
+                <ul>
+                    <li>Pueden contener letras, digitos guiones bajos y signos de peso</li>
+                    <li>Deben comenzar con una letra, un $ o un _</li>
+                    <li>Son case sensitive (X no es igual a x)</li>
+                    <li>No utilizar palabras reservadas (let, const, if, etc.)</li>
+                </ul>
+                <p>El ejemplo se visualiza en el codigo fuente</p>
+                <script>
+                    let x; // Declaramos la variable x
+                    let nombreAlumno; // Declaramos nombreAlumno como variable utilizando el estandar de lowerCamelCase
+                    let $edad // $ es un simbolo valido para declarar la variable
+                    let _patente // No podemos utilizar ningun otro caracter especial en el identificador de la variable
+
+                    const a = 5; // Es posible asignar un valor a la variable en el momento de su declaración
+                    const frase = "Hola mundo!" // Las cadenas de caracteres deben ser escritas entre comillas dobles o simples (apostrofe)
+                    let resultado = x + a; // Aparte de almacenar valores, tambien podemos almacenar expresiones
+                </script>
+
+                <h3>¿Cuando utilizar var, let o const?</h3>
+                <ol>
+                    <li>SIEMPRE declarar variables.</li>
+                    <li>Utilizar const cuando el valor NO va a ser cambiado.</li>
+                    <li>Utilizar const SI el tipo no será cambiado (arrays y objetos).</li>
+                    <li>Utilizar let si no se puede utilizar const.</li>
+                    <li>NUNCA utilizar var</li>
+                </ol>
+
+                <h3>Tipos de datos</h3>
+                <p>Las variables de JS pueden tener 8 tipos de datos, pero por ahora, solo pensemos en numeros y cadenas de caracteres </p>
+                <p>Las cadenas son texto escrito entre comillas (dobles o simples), y los numeros se escriben sin comillas. Si ponemos numeros entre comillas, estos seran tratados como una cadena de texto.</p>
+
+                <script>
+                    const pi = 3.14;
+                    let persona = "Marcelo Tinelli";
+                    let respuesta = 'Si, soy yo';
+                </script>
+
+                <h3>Multiples declaraciones en una sola sentencia</h3>
+                <p>Podemos declarar multiples variables en una sola sentencia, comenzando con let o const y separando las variables con una coma</p>
+                <script>
+                    let cliente = "Susana Gimenez", marcaAuto = 'Fitito', precio = 200;
+                    // Una declaración puede abarcar multiples lineas
+                    let otroCliente = "Ricardo Fort", 
+                    otroAuto = "Rollroyce",
+                    otroPrecio = 1000;
+                </script>
+
+                <h3>Operadores aritmeticos y de asignación</h3>
+                <p>En todos los lenguajes de programación, el operador = no significa igual, sino mas bien asignar.</p>
+                <code>
+                    x = x + 5
+                </code>
+                <p>La sentencia anterior no tiene sentido en matematicas, pero en programación significa que se asigna el valor de x + 5 a x (Se incrementa en 5 el valor de x)</p>
+                <code>
+                    let x = 5 + 2 + 3;<br>
+                    let y = 2 * 10 + 5;<br>
+                    let z = x / y; <br>
+                </code>
+                <p>Los operadores aritmeticos funcionan de la misma manera que en matematicas.</p>
+                <code>
+                    let x = "Hola" + " " + "Mundo";
+                </code>
+                <p>Al utilizar cadenas de caracteres, el operador más las concatena</p>
+                <code>
+                    let x = "5" + 2 + 3;<br>
+                    let y = 2 + 3 + "5";<br>
+                </code>
+                <p>Si escribimos un numero entre comillas, el resto será tratado como una cadena y concatenado</p>
+
+                <script>
+                    let o = "5" + 2 + 3;
+                    let y = 2 + 3 + "5";
+                    console.log(o);
+                    console.log(y);
+                </script>
+            </div>
+        </div>
+
+        <div class="articulo">
+            <div class="titulo">
+                <h2>Variables let</h2>
+            </div>
+
+            <div class="parrafo">
+                <p>En versiones anteriores de JS, las variables no tenian "scope", con la introducción de la palabra reservada let, las varibles obtuvieron un alcance de bloque. Estas deben ser declaradas antes de utilizarse, y no pueden redeclararse en el mismo <i>en el mismo scope</i>.</p>
+                <script>
+                    {
+                        let x = 2;
+                    }
+                    // Pudimos declarar nuevamente la variable x (ya declarada en un ejemplo anterior), ya que cambiamos su scope al encerrarla en un bloque aparte {}
+                    // Las variables var SIEMPRE tienen un contexto global
+                </script>
+            </div>
+        </div>
+
+            <div class="articulo">
+                <div class="titulo">
+                    <h2>Varibales const</h2>
+                </div>
+                
+                <div class="parrafo">
+                    <p>const fue introducido a JS al mismo tiempo que let, estas variables no pueden ser redeclaradas, no pueden ser reasignadas, y tienen un scope de bloque.</p>
+                    <script>
+                        const PI = 3.141592653;
+                        PI = 3.14; // Esto da error
+                        PI = PI + 10; // Esto tambien da error
+
+                        // Los errores de reasignación se ven en la consola del navegador, el editor no los muestra
+                        {
+                            // Las variables const siempre deben tener un valor asignado, no podemos declararlas sin este valor
+                            const PI = 3.141592653;
+
+                            /*
+                            const I;
+                            I = 123456;
+                            Esto da error
+                            */
+                        }
+                    </script>
+
+                    <p>Utilizamos const cuando declaramos un nuevo array, objeto, función, expresión regular ya que sabemos que estas no seran cambiadas.</p>
+                    <p>La palabra const lleva a confusiones, ya que no define un valor constante sino que define una referencia constante a un valor. Por esto no se puede reasignar un valor constante, reasignar un array constante, ni reasignar un objeto constante, pero si se puede cambiar los elementos de un array y cambiar los atributos de un objeto.</p>
+                    <script>
+                        // Podemos declarar un array constante
+                        const autos = {"Toyota", "Volvo", "Rollroyce"};
+
+                        // Podemos cambiar un elemento
+                        autos [0] = "Ferrari";
+
+                        // Podemos agregar elementos
+                        autos.push("Audi");
+
+                        // No podemos reasignar el array
+                        autos = ["Citroen", "Chevrolet", "Ford"]; // ERROR 
+                    </script>
+                </div>
+            </div>
+
+            <div class="articulo">
+                <div class="titulo">
+                    <h2>Tipos de datos</h2>
+                </div>
+                
+                <div class="parrafo">
+                    <p>JS tiene 8 tipos de datos:</p>
+                    <table class="tablatipos">
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                        </tr>
+                        <tr>
+                            <td>String</td>
+                            <td>Un texto compuesto por caracteres encerrados entre comillas</td>
+                        </tr>
+                        <tr>
+                            <td>Number</td>
+                            <td>Un número representando un valor matemático</td>
+                        </tr>
+                        <tr>
+                            <td>Bigint</td>
+                            <td>Un número entero grande</td>
+                        </tr>
+                        <tr>
+                            <td>Boolean</td>
+                            <td>Un tipo de dato que representa un verdadero o falso</td>
+                        </tr>
+                        <tr>
+                            <td>Object</td>
+                            <td>Una colección de datos del tipo llave-valor</td>
+                        </tr>
+                        <tr>
+                            <td>Undefined</td>
+                            <td>Una variable primitiva sin valor asignado</td>
+                        </tr>
+                        <tr>
+                            <td>Null</td>
+                            <td>Un valor primitivo representando la ausencia de un objeto</td>
+                        </tr>
+                        <tr>
+                            <td>Symbol</td>
+                            <td>Un identificador único y primitivo</td>
+                        </tr>
+                    </table>
+                    <p>El ejemplo se ve en el codigo fuente</p>
+                    <script>
+                        {
+                            // String
+                            let color = "rojo";
+                            let apellido = "Gimenez";
+
+                            //Number
+                            let altura = 10;
+                            let temperatura = 12.7;
+
+                            // Bigint
+                            let x = 123456789123456789123456;
+                            let y = BigInt (123456789123456789123456);
+
+                            // Boolean
+                            let a = true;
+                            let b = false;
+
+                            // Object
+                            const persona = {nombre: "Ricardo", apellido: "Fort"};
+
+                            // Array object
+                            const autos = ["Vw", "Peugeot", "Ford"];
+
+                            // Date object
+                            const date = new Date ("2025-10-15");
+
+                            // Undefined
+                            let var1;
+                            let var2;
+
+                            // Null
+                            let var3 = null;
+                            let var4 = null;
+
+                            //Symbol
+                            const var5 = Symbol();
+                            const var6 = Symbol();
+                        }
+                    </script>
+                    <p>Podemos utilizar un operador llamado typeof para ver de que tipo es un valor.</p>
+                    <script>
+                        typeof "Mirtha"; // Devuelve "string"
+                        typeof 123;      // Devuelve "Number"
+                        typeof true;    // Devuelve "Boolean"
+                    </script>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <p>Posadas 601 | Lomas del Mirador</p>
+    </footer>
+</body>
+</html>
